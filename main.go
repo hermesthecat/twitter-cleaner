@@ -274,6 +274,7 @@ func deleteFromData(api *anaconda.TwitterApi) error {
 		if _, err := f.WriteString(t.Tweet.ID + "\n"); err != nil {
 			return err
 		}
+		time.Sleep(1 * time.Second)
 	}
 
 	log.Infof("deleted %d tweets from twitter archive", deletedCount)
@@ -376,6 +377,7 @@ func unlikeFromData(api *anaconda.TwitterApi) error {
 		if _, err := f.WriteString(t.Like.TweetID + "\n"); err != nil {
 			return err
 		}
+		time.Sleep(1 * time.Second)
 	}
 
 	log.Infof("unfavorited %d tweets from archive", unfavCount)
