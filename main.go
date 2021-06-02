@@ -93,6 +93,7 @@ func deleteFromTimeline(api *anaconda.TwitterApi) error {
 				deletedCount++
 			}
 			maxID = fmt.Sprintf("%d", t.Id)
+			time.Sleep(1 * time.Second)
 		}
 	}
 
@@ -171,6 +172,7 @@ func unFavorite(api *anaconda.TwitterApi) error {
 				unfavedCount++
 			}
 			maxID = fmt.Sprintf("%d", t.Id)
+			time.Sleep(1 * time.Second)
 		}
 	}
 
